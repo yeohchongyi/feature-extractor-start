@@ -2,14 +2,13 @@ var featureExtractor, classifier, video, loss, redCount, blueCount
 
 redCount = blueCount = 0
 
-function setup() 
+function setup(){
   noCanvas()
   video = createCapture(VIDEO)
   video.parent('video')
   featureExtractor = ml5.featureExtractor('MobileNet')
   classifier = featureExtractor.classification(video)
   setupButtons()
-}
 
 // A function to create the buttons
 function setupButtons() {
