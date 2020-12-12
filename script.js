@@ -9,7 +9,7 @@ function setup(){
   featureExtractor = ml5.featureExtractor('MobileNet')
   classifier = featureExtractor.classification(video)
   setupButtons()
-
+}
 // A function to create the buttons
 function setupButtons() {
   buttonA = select('#red')
@@ -18,7 +18,7 @@ function setupButtons() {
     redCount++
     classifier.addImage('red')
     select('#redCount').html(redCount)
-  })
+  }})
   buttonB.mousePressed(function () {
     blueCount++
     classifier.addImage('blue')
